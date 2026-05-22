@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — Shree Surya Engineers</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+.filter-btn { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; padding:8px 20px; border-radius:20px; border:1.5px solid var(--rule); background:var(--white); color:var(--steel-2); cursor:pointer; transition:all .25s; }
+.filter-btn:hover, .filter-btn.active { background:var(--blue); color:var(--white); border-color:var(--blue); }
+.product-card { background:var(--white); border:1px solid var(--rule); border-radius:6px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.06); transition:transform .28s, box-shadow .28s, border-color .28s; height:100%; }
+.product-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(15,31,61,.15); border-color:rgba(29,78,216,.25); }
+.product-card:hover .product-img-wrap img { transform:scale(1.07); }
+.product-card-top { height:4px; background:linear-gradient(90deg,var(--blue),var(--navy-mid)); }
+.product-img-wrap { background:var(--blue-pale); height:160px; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+.product-img-wrap img { width:100%; height:100%; object-fit:cover; transition:transform .4s ease; }
+.product-card-body { padding:16px; }
+.product-serial { font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--steel-3); letter-spacing:1.5px; margin-bottom:5px; }
+.product-name { font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:var(--navy); line-height:1.35; }
+.product-cat { display:inline-block; margin-top:8px; font-size:10px; font-weight:600; font-family:'Montserrat',sans-serif; background:var(--blue-lt); color:var(--blue); padding:3px 10px; border-radius:20px; }
+</style>
+</head>
+<body>
+<div id="sse-nav"></div>
+
+<section class="page-hero">
+  <div class="container position-relative" style="z-index:2;">
+    <div class="hero-label">What We Make</div>
+    <h1>Our Products</h1>
+    <p>Complete manufacturing range — precision engineered for every industrial application.</p>
+    <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item active">Products</li></ol></nav>
+  </div>
+</section>
+<div id="sse-ticker"></div>
+
+<!-- STATS STRIP -->
+<section style="padding:36px 0;background:var(--white);border-bottom:1px solid var(--rule);">
+  <div class="container">
+    <div class="row g-3 text-center">
+      <div class="col-6 col-md-3"><div class="stat-num" style="font-size:28px;">19+</div><div class="stat-lbl" style="font-size:9px;">Product Categories</div></div>
+      <div class="col-6 col-md-3"><div class="stat-num" style="font-size:28px;">100%</div><div class="stat-lbl" style="font-size:9px;">Quality Assured</div></div>
+      <div class="col-6 col-md-3"><div class="stat-num" style="font-size:28px;">CNC</div><div class="stat-lbl" style="font-size:9px;">Precision Machined</div></div>
+      <div class="col-6 col-md-3"><div class="stat-num" style="font-size:28px;">Pan India</div><div class="stat-lbl" style="font-size:9px;">Delivery</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS GRID -->
+<section style="padding:72px 0 80px;background:var(--bg);">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="section-label justify-content-center">Complete Range</div>
+      <h2 class="section-title">All <span>Products</span></h2>
+      <p class="section-sub mx-auto">Precision-engineered components manufactured to exact tolerances for diverse industrial applications.</p>
+    </div>
+
+    <div class="row g-3 g-md-4" id="products-grid">
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="beval_gear.jpg" alt="Bevel Gears" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 01</div>
+            <div class="product-name">Bevel Gears</div>
+            <span class="product-cat">Gears</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="spiral-beval.jpg" alt="Spiral Bevel Gear Sets" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 02</div>
+            <div class="product-name">Spiral Bevel Gear Sets</div>
+            <span class="product-cat">Gears</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="helical_gears.jpg" alt="Helical Gears" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 03</div>
+            <div class="product-name">Helical Gears</div>
+            <span class="product-cat">Gears</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="spur_gears.jpg" alt="Spur Gears" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 04</div>
+            <div class="product-name">Spur Gears</div>
+            <span class="product-cat">Gears</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="worm_gear_components.jpg" alt="Worm Gear Components" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 05</div>
+            <div class="product-name">Worm Gear Components</div>
+            <span class="product-cat">Gears</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="gear_shaft.jpg" alt="Gear Shafts" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 06</div>
+            <div class="product-name">Gear Shafts</div>
+            <span class="product-cat">Shafts</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="pinion_shaft.jpg" alt="Pinion Shafts" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 07</div>
+            <div class="product-name">Pinion Shafts</div>
+            <span class="product-cat">Shafts</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="coupling.jpg" alt="Coupling Parts" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 08</div>
+            <div class="product-name">Coupling Parts</div>
+            <span class="product-cat">Components</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="conveyor_chain_links.jpg" alt="Chain Conveyor Links" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 09</div>
+            <div class="product-name">Chain Conveyor Links</div>
+            <span class="product-cat">Chains</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="industrial_chain.jpg" alt="Industrial Chain" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 10</div>
+            <div class="product-name">Industrial Chain Assemblies</div>
+            <span class="product-cat">Chains</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="precision_machined_components.jpg" alt="Precision Machined Components" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 11</div>
+            <div class="product-name">Precision Machined Components</div>
+            <span class="product-cat">Components</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="textile_machine_spares.jpg" alt="Textile Machinery Spares" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 12</div>
+            <div class="product-name">Textile Machinery Spares</div>
+            <span class="product-cat">Spares</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="heavy_duty_gear_assemblies.jpg" alt="Heavy Duty Gear Assemblies" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 13</div>
+            <div class="product-name">Heavy Duty Gear Assemblies</div>
+            <span class="product-cat">Assemblies</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="bearing_housing_assemblies.jpg" alt="Bearing Housing Components" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 14</div>
+            <div class="product-name">Bearing Housing Components</div>
+            <span class="product-cat">Components</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="customised_casting_parts.jpg" alt="Customized Casting Parts" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 15</div>
+            <div class="product-name">Customized Casting Parts</div>
+            <span class="product-cat">Castings</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="forged_engineering_components.jpg" alt="Forged Engineering Components" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 16</div>
+            <div class="product-name">Forged Engineering Components</div>
+            <span class="product-cat">Forgings</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="drive_shafts.jpg" alt="Drive Shafts" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 17</div>
+            <div class="product-name">Drive Shafts</div>
+            <span class="product-cat">Shafts</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="industrial_seals.jpg" alt="Industrial Seals" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 18</div>
+            <div class="product-name">Industrial Seals</div>
+            <span class="product-cat">Components</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal">
+        <div class="product-card">
+          <div class="product-card-top"></div>
+          <div class="product-img-wrap"><img src="industrial_sprockets.jpg" alt="Industrial Sprockets" loading="lazy"></div>
+          <div class="product-card-body">
+            <div class="product-serial">PROD — 19</div>
+            <div class="product-name">Industrial Sprockets</div>
+            <span class="product-cat">Components</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container text-center position-relative" style="z-index:2;">
+    <div class="reveal">
+      <h2 class="mb-3">Don't See What You Need?</h2>
+      <p class="mb-4">We manufacture custom components to your exact specifications. Get in touch.</p>
+      <a href="contact.html" class="btn-white-sse">Request Custom Part →</a>
+    </div>
+  </div>
+</section>
+
+<div id="sse-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="shared.js"></script>
+</body>
+</html>
